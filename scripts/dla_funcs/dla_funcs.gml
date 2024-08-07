@@ -20,7 +20,7 @@ function init_map(_start_width, _start_height, _map_width, _map_height) {
 	return _map;
 }
 
-function dla_gen(_map_width, _map_height, _map, _fill) {
+function dla_gen_solid(_map_width, _map_height, _map, _fill) {
 	// new point of not
 	var _active = false;
 	var _rand_x = 0;
@@ -55,12 +55,71 @@ function dla_gen(_map_width, _map_height, _map, _fill) {
 				_yy = 0;
 			}
 			// checking for SOLID
-			if _rand_x + _xx >= 0 && _rand_x + _xx < _map_width 
-			&& _rand_y + _yy >= 0 && _rand_y + _yy < _map_height {
+			if _rand_x + _xx > 0 && _rand_x + _xx < _map_width - 1 
+			&& _rand_y + _yy > 0 && _rand_y + _yy < _map_height - 1{
 				if _map[_rand_x + _xx][_rand_y + _yy] == SOLID {
 					_map[_rand_x + _xx][_rand_y + _yy] = EMPTY;
 					_rand_x = _rand_x + _xx;
 					_rand_y = _rand_y + _yy;
+				} else {
+					_rand_x = _rand_x + _xx;
+					_rand_y = _rand_y + _yy;
+					_i--;
+			
+				}
+			} else {
+				_active = false;
+				_i--;
+			}
+		} else {
+			_i--;
+			_active = false;
+		}
+	}
+	return _map;
+}
+
+function dla_gen_empty(_map_width, _map_height, _map, _fill) {
+	// new point of not
+	var _active = false;
+	var _rand_x = 0;
+	var _rand_y = 0;
+	for(var _i=0; _i<_fill; _i++) {
+		
+		// get random point
+		if _active == false {
+			_rand_x = irandom(_map_width - 1);
+			_rand_y = irandom(_map_height - 1);
+			_active = true;
+		}
+		
+		// checking for solid
+		if _map[_rand_x][_rand_y] == SOLID {
+			// get random direction
+			var _rand_dir = irandom(3);
+			var _xx = 0;
+			var _yy = 0;
+			// setting 4 direction so no diagonal movement
+			if _rand_dir == 0 {
+				_xx = 0;
+				_yy = 1;
+			} else if _rand_dir == 1 {
+				_xx = 0;
+				_yy = -1;
+			} else if _rand_dir == 2 {
+				_xx = 1;
+				_yy = 0;
+			} else if _rand_dir == 3 {
+				_xx = -1;
+				_yy = 0;
+			}
+			// checking for SOLID
+			if _rand_x + _xx > 0 && _rand_x + _xx < _map_width - 1
+			&& _rand_y + _yy > 0 && _rand_y + _yy < _map_height - 1 {
+				if _map[_rand_x + _xx][_rand_y + _yy] == EMPTY {
+					_map[_rand_x][_rand_y] = EMPTY;
+					//_rand_x = _rand_x + _xx;
+					//_rand_y = _rand_y + _yy;
 				} else {
 					_rand_x = _rand_x + _xx;
 					_rand_y = _rand_y + _yy;

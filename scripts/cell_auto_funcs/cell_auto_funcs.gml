@@ -28,7 +28,7 @@ function count_neighbours(_x, _y, _map, _map_width, _map_height) {
 		for (var _dy=-1; _dy<2; _dy++) {
 			var _xx = _dx + _x;
 			var _yy = _dy + _y;
-			if (_xx < 0 || _yy < 0 || _xx >= _map_width || _yy >= _map_height) {
+			if (_xx <= 0 || _yy <= 0 || _xx >= _map_width - 1 || _yy >= _map_height - 1) {
 				_count++;
 			} else if (_dx == 0 && _dy == 0) {
 				continue;
