@@ -36,9 +36,9 @@
   "resources":[
     {"id":{"name":"oCellGen","path":"objects/oCellGen/oCellGen.yy",},},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
-    {"id":{"name":"bsp_funcs","path":"scripts/bsp_funcs/bsp_funcs.yy",},},
     {"id":{"name":"cell_auto_funcs","path":"scripts/cell_auto_funcs/cell_auto_funcs.yy",},},
     {"id":{"name":"dla_funcs","path":"scripts/dla_funcs/dla_funcs.yy",},},
+    {"id":{"name":"room_funcs","path":"scripts/room_funcs/room_funcs.yy",},},
   ],
   "resourceType":"GMProject",
   "resourceVersion":"2.0",

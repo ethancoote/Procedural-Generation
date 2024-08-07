@@ -1,9 +1,9 @@
 {
   "$GMScript":"v1",
-  "%Name":"bsp_funcs",
+  "%Name":"room_funcs",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"bsp_funcs",
+  "name":"room_funcs",
   "parent":{
     "name":"Scripts",
     "path":"folders/Scripts.yy",
