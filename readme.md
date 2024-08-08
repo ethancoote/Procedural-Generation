@@ -12,7 +12,7 @@ Creating procedurally generated, traversable dungeon systems.
 
 - Working with a few different algorithms to get unique dungeon layouts.
 
-    - <b>Cellular Automation (CA):</b> Used to create larger open spaces with a more realistic and 'smooth' feel.
+    - <b>Cellular Automation (CA):</b> Used to create larger open spaces with a more realistic and 'smooth' feel. The one downside of this approach is that the terrain is not inherently continuous.
 
         ![alt text](screenshots/imageCA1.png) ![alt text](screenshots/imageCA2.png)
 
