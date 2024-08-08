@@ -90,8 +90,10 @@ function draw_map(_map, _x, _y, _map_width, _map_height) {
 			
 			if _map[_xx][_yy] == SOLID {
 				draw_set_color(c_white);
+				draw_set_alpha(0.3);
 			} else {
 				draw_set_color(c_gray);
+				draw_set_alpha(0.3);
 			}
 			draw_rectangle(_x1, _y1, _x2, _y2, false);
 		}
