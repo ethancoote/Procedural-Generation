@@ -24,5 +24,5 @@ Creating procedurally generated, traversable dungeon systems.
 
 ## Author
 
-### Ethan Coote 
-[Itch.io](https://bryanbill.itch.io/) | [GameDev Portfolio](https://ethancoote.github.io/Games-Portfolio/)
+<b>Ethan Coote -
+[Itch.io](https://bryanbill.itch.io/) | [GameDev Portfolio](https://ethancoote.github.io/Games-Portfolio/) </b>
