@@ -1,5 +1,5 @@
 // stats
-spd = 2;
+spd = 1.7;
 
 // init
 x = round(oCellGen.map_width/2) * 16;

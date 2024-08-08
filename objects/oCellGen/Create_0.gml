@@ -1,7 +1,11 @@
 // randomizes the random seed
 randomize();
-map_width = 60;
-map_height = 60;
+map_width = 90;
+map_height = 90;
+
+rel_player_pos = [0,0];
+offset = 10;
+cor = 2;
 
 
 // cellular automata

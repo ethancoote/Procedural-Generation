@@ -1,6 +1,6 @@
 // Script assets have changed for v2.3.0 see
 
-#macro CELLSIZE 4
+#macro CELLSIZE 2
 #macro EMPTY 0
 #macro SOLID 1
 

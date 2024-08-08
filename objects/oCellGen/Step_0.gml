@@ -1,2 +1,1 @@
-/// @description Insert description here
-// You can write your code in this editor
+rel_player_pos = [oPlayer.x/16*CELLSIZE,oPlayer.y/16*CELLSIZE];
