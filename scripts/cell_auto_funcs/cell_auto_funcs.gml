@@ -3,6 +3,7 @@
 #macro CELLSIZE 2
 #macro EMPTY 0
 #macro SOLID 1
+#macro PRIZE 2
 
 // init and randomize map
 function randomize_map(_spawn_chance, _map_width, _map_height) {
