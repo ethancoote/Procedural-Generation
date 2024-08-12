@@ -94,7 +94,7 @@ function draw_map(_map, _x, _y, _map_width, _map_height) {
 				draw_set_alpha(0.3);
 			} else if _map[_xx][_yy] == PRIZE {
 				draw_set_color(c_yellow);
-				draw_set_alpha(0.3);
+				draw_set_alpha(0.7);
 			} else {
 				draw_set_color(c_gray);
 				draw_set_alpha(0.3);
