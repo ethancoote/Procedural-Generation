@@ -1,5 +1,3 @@
-// Script assets have changed for v2.3.0 see
-// https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function room_gen(_map_width, _map_height, _min_width, _min_height, _max_width, _max_height, _rooms, _map){
 	for(var _i=0; _i<_rooms;_i++) {
 		// getting room height width
@@ -36,7 +34,40 @@ function room_gen(_map_width, _map_height, _min_width, _min_height, _max_width, 
 }
 
 function set_prizes(_map, _map_width, _map_height) {
-	var _sides = 0;  
-	var _dist = 0;
+	 
+	for (var _xx = 0; _xx < _map_width; _xx++) {
+		for (var _yy = 0; _yy < _map_height; _yy++) {
+			if _map[_xx][_yy] == EMPTY {
+				var _sides = 0; 
+				// checking how many walls surround a position
+				if  _map[_xx + 1][_yy] == SOLID {
+					_sides += 1;
+				} 
+				if  _map[_xx - 1][_yy] == SOLID {
+					_sides += 1;
+				} 
+				if  _map[_xx][_yy + 1] == SOLID {
+					_sides += 1;
+				} 
+				if  _map[_xx][_yy - 1] == SOLID {
+					_sides += 1;
+				} 
+				
+				// randomly add prizes
+				var _rand = random(1);
+				if _sides == 2 {
+					if _rand < 0.05 {
+						_map[_xx][_yy] = PRIZE;
+					}
+				} else if _sides == 3 {
+					if _rand < 0.3 {
+						_map[_xx][_yy] = PRIZE;
+					}
+				}
+				
+			}
+		}
+	}
 	
+	return _map;
 }
