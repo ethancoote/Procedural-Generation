@@ -37,5 +37,6 @@ function room_gen(_map_width, _map_height, _min_width, _min_height, _max_width, 
 
 function set_prizes(_map, _map_width, _map_height) {
 	var _sides = 0;  
+	var _dist = 0;
 	
 }
