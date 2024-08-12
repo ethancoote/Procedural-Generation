@@ -16,9 +16,9 @@ cor = 2;
 // diffusion limited aggregation
 cell_map = init_map(6, 6, map_width, map_height);
 // solid based diffusion
-cell_map = dla_gen_solid(map_width, map_height, cell_map, 2000);
+//cell_map = dla_gen_solid(map_width, map_height, cell_map, 2000);
 // empy based diffusion
-//cell_map = dla_gen_empty(map_width, map_height, cell_map, 1500);
+cell_map = dla_gen_empty(map_width, map_height, cell_map, 1500);
 
 //cell_map = room_gen(map_width, map_height, 6, 6, 30, 30, 15, cell_map);
 //cell_map = dla_gen_empty(map_width, map_height, cell_map, 500);

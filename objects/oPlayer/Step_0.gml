@@ -15,8 +15,10 @@ if x_spd != 0 && y_spd != 0 {
 }
 
 // pickup item
-if place_meeting(x, y, oPrize1) {
-	var _inst = instance_nearest(x, y, oPrize1);
+var _inst = instance_place(x, y, oPrize1)
+if  _inst != noone {
+	var _map_pos = [_inst.x/16, _inst.y/16];
+	oCellGen.cell_map[_map_pos[0]][_map_pos[1]] = EMPTY;
 	instance_destroy(_inst);
 }
 
