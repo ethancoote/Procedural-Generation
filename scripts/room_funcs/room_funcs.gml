@@ -34,6 +34,7 @@ function room_gen(_map_width, _map_height, _min_width, _min_height, _max_width, 
 }
 
 function set_prizes(_map, _map_width, _map_height) {
+	var _center = [round(_map_width/2), round(_map_height/2)];
 	 
 	for (var _xx = 0; _xx < _map_width; _xx++) {
 		for (var _yy = 0; _yy < _map_height; _yy++) {
@@ -54,12 +55,13 @@ function set_prizes(_map, _map_width, _map_height) {
 				} 
 				
 				// randomly add prizes
+				var _dist = dist_between_points(_center[0], _center[1], _xx, _yy);
 				var _rand = random(1);
-				if _sides == 2 {
+				if _sides == 2 && _dist > 10 {
 					if _rand < 0.05 {
 						_map[_xx][_yy] = PRIZE;
 					}
-				} else if _sides == 3 {
+				} else if _sides == 3 && _dist > 20 {
 					if _rand < 0.3 {
 						_map[_xx][_yy] = PRIZE;
 					}
@@ -70,4 +72,9 @@ function set_prizes(_map, _map_width, _map_height) {
 	}
 	
 	return _map;
+}
+
+function dist_between_points(_x1, _y1, _x2, _y2) {
+	var _dist = sqrt(sqr(_x1-_x2) + sqr(_y1-_y2));
+	return _dist;
 }
