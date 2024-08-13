@@ -61,8 +61,12 @@ function set_prizes(_map, _map_width, _map_height) {
 					if _rand < 0.05 {
 						_map[_xx][_yy] = PRIZE;
 					}
-				} else if _sides == 3 && _dist > 20 {
+				} else if _sides == 3 && _dist > 16 && _dist < 24 {
 					if _rand < 0.3 {
+						_map[_xx][_yy] = PRIZE;
+					}
+				} else if _sides == 3 && _dist >= 24 {
+					if _rand < 0.5 {
 						_map[_xx][_yy] = PRIZE;
 					}
 				}
