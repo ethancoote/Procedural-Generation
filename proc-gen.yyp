@@ -48,6 +48,7 @@
     {"id":{"name":"cell_auto_funcs","path":"scripts/cell_auto_funcs/cell_auto_funcs.yy",},},
     {"id":{"name":"controls","path":"scripts/controls/controls.yy",},},
     {"id":{"name":"dla_funcs","path":"scripts/dla_funcs/dla_funcs.yy",},},
+    {"id":{"name":"fov_funcs","path":"scripts/fov_funcs/fov_funcs.yy",},},
     {"id":{"name":"room_funcs","path":"scripts/room_funcs/room_funcs.yy",},},
     {"id":{"name":"sPlayer","path":"sprites/sPlayer/sPlayer.yy",},},
     {"id":{"name":"sPrize1","path":"sprites/sPrize1/sPrize1.yy",},},
