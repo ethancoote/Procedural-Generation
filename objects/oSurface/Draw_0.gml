@@ -12,13 +12,16 @@ if (!surface_exists(surf)) {
 // init dark
 surface_set_target(surf);
 draw_set_color(c_black);
-draw_set_alpha(0.8);
+draw_set_alpha(1);
 draw_rectangle(0,0, _cw, _ch, 0);
 gpu_set_blendmode(bm_subtract);
 
 // cutting holes
 with (oPlayer) {
-	
+	//draw_sprite_ext(sLight, image_index, x-_cx-2, y-_cy-6, 0.8 /*+ random(0.02)*/, 0.8/*+random(0.02)*/, 0, c_white, 1)
+	for (var _i = 0; i<360; i++) {
+		draw_sprite_ext(sLight, image_index, x-_cx-2, y-_cy-6, 0.7 /*+ random(0.02)*/, 0.7/*+random(0.02)*/, i, c_white, 1)
+	}
 }
 
 // end

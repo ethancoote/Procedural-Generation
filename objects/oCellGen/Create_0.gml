@@ -28,8 +28,10 @@ cell_map = set_prizes(cell_map, map_width, map_height);
 
 // create tilemap
 global.ground_layer = layer_create(1);
+global.wall_layer = layer_create(-1);
 global.ground_tilemap = layer_tilemap_create(global.ground_layer, 0, 0, tsTiles, room_width, room_height);
-global.wall_tilemap = layer_tilemap_create(global.ground_layer, 0, 0, tsTiles, room_width, room_height);
+global.wall_tilemap = layer_tilemap_create(global.wall_layer, 0, 0, tsTiles, room_width, room_height);
+
 
 for(i=0; i<map_width;i++) {
 	for(j=0; j<map_height; j++) {
@@ -39,7 +41,7 @@ for(i=0; i<map_width;i++) {
 			tilemap_set_at_pixel(global.ground_tilemap, 1, i*16, j*16);
 		} else if cell_map[i][j] == PRIZE {
 			tilemap_set_at_pixel(global.ground_tilemap, 1, i*16, j*16);
-			var _inst = instance_create_depth(i*16, j*16, -1, oPrize1);
+			var _inst = instance_create_depth(i*16, j*16, 0, oPrize1);
 			with (_inst) {
 				image_index = irandom(7);
 			}

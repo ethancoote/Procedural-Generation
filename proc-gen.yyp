@@ -55,6 +55,8 @@
     {"id":{"name":"dla_funcs","path":"scripts/dla_funcs/dla_funcs.yy",},},
     {"id":{"name":"fov_funcs","path":"scripts/fov_funcs/fov_funcs.yy",},},
     {"id":{"name":"room_funcs","path":"scripts/room_funcs/room_funcs.yy",},},
+    {"id":{"name":"sLight","path":"sprites/sLight/sLight.yy",},},
+    {"id":{"name":"sLightAngle","path":"sprites/sLightAngle/sLightAngle.yy",},},
     {"id":{"name":"sPlayer","path":"sprites/sPlayer/sPlayer.yy",},},
     {"id":{"name":"sPrize1","path":"sprites/sPrize1/sPrize1.yy",},},
     {"id":{"name":"sRay","path":"sprites/sRay/sRay.yy",},},
