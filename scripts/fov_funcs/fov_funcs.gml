@@ -1,3 +1,3 @@
-function fov_funcs(){
+function fov_funcs() {
 
 }

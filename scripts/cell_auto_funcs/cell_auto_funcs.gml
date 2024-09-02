@@ -90,14 +90,14 @@ function draw_map(_map, _x, _y, _map_width, _map_height) {
 			var _y2 = _y1 + CELLSIZE;
 			
 			if _map[_xx][_yy] == SOLID {
-				draw_set_color(c_white);
-				draw_set_alpha(0.3);
+				draw_set_color(c_ltgray);
+				draw_set_alpha(1); // 0.3
 			} else if _map[_xx][_yy] == PRIZE {
 				draw_set_color(c_yellow);
-				draw_set_alpha(0.7);
+				draw_set_alpha(1); // 0.7
 			} else {
 				draw_set_color(c_gray);
-				draw_set_alpha(0.3);
+				draw_set_alpha(1); // 0.3
 			}
 			draw_rectangle(_x1, _y1, _x2, _y2, false);
 		}

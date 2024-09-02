@@ -42,6 +42,7 @@
   "resources":[
     {"id":{"name":"oCamera","path":"objects/oCamera/oCamera.yy",},},
     {"id":{"name":"oCellGen","path":"objects/oCellGen/oCellGen.yy",},},
+    {"id":{"name":"oControl","path":"objects/oControl/oControl.yy",},},
     {"id":{"name":"oPlayer","path":"objects/oPlayer/oPlayer.yy",},},
     {"id":{"name":"oPrize1","path":"objects/oPrize1/oPrize1.yy",},},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},

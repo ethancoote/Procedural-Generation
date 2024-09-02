@@ -5,8 +5,8 @@ map_width = 90;
 map_height = 90;
 
 rel_player_pos = [0,0];
-x_offset = 10;
-y_offset = 350;
+x_offset = 10; // 10
+y_offset = 350; // 350
 cor = 2;
 
 
